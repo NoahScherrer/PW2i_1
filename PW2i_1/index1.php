@@ -45,7 +45,7 @@
         <img src="http://localhost/PW2i_1/Pics/TG_Symbol.PNG" alt="TG Logo" style="width: 100%">
     </header>
 
-    <body onload="document.createElement('form').submit.call(document.getElementById('myForm'))">
+    <body>
         <div class="row mt-4">
             <div class="col-lg-6 ml-2">
                 <h1>Ständige Bevölkerung Thurgau</h1>
@@ -236,31 +236,31 @@
             if ($CurrentBezirk != "Bezirk") {
                 $ArrayBezirk = Filtern($CurrentArray, $ArrayData, $CurrentBezirk, 6);
             } else {
-                $ArrayBezirk = $CurrentArray();
+                $ArrayBezirk = $CurrentArray;
             }
 
             if ($CurrentGemeinde != "Gemeinde") {
                 $ArrayGemeinde = Filtern($ArrayBezirk, $ArrayData, $CurrentGemeinde, 8);
             } else {
-                $ArrayGemeinde = $ArrayBezirk();
+                $ArrayGemeinde = $ArrayBezirk;
             }
 
             if ($CurrentJahr != "Jahr") {
                 $ArrayJahr = Filtern($ArrayGemeinde, $ArrayData, $CurrentJahr, 5);
             } else {
-                $ArrayJahr = $ArrayGemeinde();
+                $ArrayJahr = $ArrayGemeinde;
             }
 
             if ($CurrentGeschlecht != "Geschlecht") {
                 $ArrayGeschlecht = Filtern($ArrayJahr, $ArrayData, $CurrentGeschlecht, 3);
             } else {
-                $ArrayGeschlecht = $ArrayJahr();
+                $ArrayGeschlecht = $ArrayJahr;
             }
 
             if ($CurrentAlter != "Altersklasse") {
                 $ArrayAltersklasse = Filtern($ArrayGeschlecht, $ArrayData, $CurrentAlter, 1);
             } else {
-                $ArrayAltersklasse = $ArrayGeschlecht();
+                $ArrayAltersklasse = $ArrayGeschlecht;
             }
             ?>
             <div class="col-lg-3">
